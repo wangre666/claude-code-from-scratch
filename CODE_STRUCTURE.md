@@ -39,11 +39,8 @@ npm start
 .
 ├── src/                 # TypeScript 版本核心实现
 ├── python/              # Python 版本实现
-├── docs/                # 中文教程文档
-├── en/                  # 英文教程文档
 ├── test/                # 手动测试资源、测试脚本、测试技能和 MCP server
 ├── assets/              # README 和教程使用的图片资源
-├── index.html           # Docsify 文档站入口
 ├── README.md            # 中文项目说明
 ├── README_EN.md         # 英文项目说明
 ├── CLAUDE.md            # 项目级 Agent 指令
