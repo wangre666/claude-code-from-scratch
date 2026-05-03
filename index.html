@@ -259,13 +259,9 @@
         placeholder: '搜索文档...',
         noData: '没有找到结果',
         depth: 3,
-        pathNamespaces: ['/', '/en'],
+        pathNamespaces: ['/'],
       },
       coverpage: false,
-      alias: {
-        '/en/(.*)': '/en/$1',
-        '/en/_sidebar.md': '/en/_sidebar.md',
-      },
       tabs: {
         persist: true,
         sync: true,
@@ -306,7 +302,7 @@
     window.$docsify.plugins = (window.$docsify.plugins || []).concat([
       function(hook) {
 
-        // --- Language switcher (context-aware) ---
+        // --- Top action buttons ---
         hook.doneEach(function() {
           var group = document.getElementById('top-btn-group');
           if (!group) {
@@ -315,30 +311,6 @@
             group.className = 'top-btn-group';
             document.body.appendChild(group);
           }
-
-          // Language button
-          var oldLang = document.getElementById('lang-switch');
-          if (oldLang) oldLang.remove();
-
-          var hash = location.hash || '#/';
-          var path = hash.slice(1);
-          var isEn = path.startsWith('/en/') || path === '/en';
-          var targetPath, label;
-
-          if (isEn) {
-            label = '中文';
-            targetPath = path.replace(/^\/en\/?/, '/') || '/';
-          } else {
-            label = 'English';
-            targetPath = (path === '/' || path === '') ? '/en/' : '/en' + path;
-          }
-
-          var btn = document.createElement('a');
-          btn.id = 'lang-switch';
-          btn.className = 'lang-switch-btn';
-          btn.href = '#' + targetPath;
-          btn.textContent = label;
-          group.appendChild(btn);
 
           // Dark mode button (only create once)
           if (!document.getElementById('dark-toggle')) {

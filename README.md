@@ -14,10 +14,6 @@
 <br/>
 
 [**📘 在线阅读教程 →**](https://windy3f3f3f3f.github.io/claude-code-from-scratch/)
-&nbsp;&nbsp;|&nbsp;&nbsp;
-[📘 Read Tutorial (English) →](https://windy3f3f3f3f.github.io/claude-code-from-scratch/#/en/)
-&nbsp;&nbsp;|&nbsp;&nbsp;
-[English](./README_EN.md)
 
 <br/>
 
